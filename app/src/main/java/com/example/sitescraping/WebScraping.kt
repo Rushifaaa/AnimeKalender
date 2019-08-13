@@ -3,6 +3,7 @@ package com.example.sitescraping
 import org.jsoup.Jsoup
 
 fun main() {
+
     val doc = Jsoup.connect("https://confluence.allaboutapps.at/#all-updates").get()
     doc.run {
         select("body").forEachIndexed { index, element ->
